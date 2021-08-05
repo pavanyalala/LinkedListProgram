@@ -16,18 +16,17 @@ namespace LinkedList
             Node node = new Node(data);
             if (this.head == null)
             {
-            this.head = node;
-        }
+                this.head = node;
+            }
             else
             {
-            Node temp = head;
-            while (temp.next != null)
-            {
-                temp = temp.next;
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
-            temp.next = node;
-        }
-        Console.WriteLine("Inserted values : " + node.data);
         }
 
         /// <summary>
@@ -37,7 +36,7 @@ namespace LinkedList
         public void AddInReverseOrder(int data)
         {
             Node newNode = new Node(data);
-            if(this.head == null)
+            if (this.head == null)
             {
                 this.head = newNode;
             }
@@ -46,6 +45,27 @@ namespace LinkedList
                 Node temp = this.head;
                 head = newNode;
                 head.next = temp;
+            }
+        }   
+        /// <summary>
+        /// UC-3 Appendence
+        /// </summary>
+        /// <param name="data"></param>
+        public void Appendence(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = newNode;
             }
         }
         /// <summary>
@@ -61,9 +81,11 @@ namespace LinkedList
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data+" ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
         }
     }
 }
+        
+

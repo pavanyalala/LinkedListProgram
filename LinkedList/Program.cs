@@ -6,13 +6,12 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to linked list program");
             LinkedList linkedList = new LinkedList();
-            linkedList.AddInReverseOrder(70);
-            linkedList.AddInReverseOrder(30);
-            linkedList.AddInReverseOrder(56);
+            linkedList.Appendence(56);
+            linkedList.Appendence(30);
+            linkedList.Appendence(70);
             linkedList.Display();
-
         }
     }
 }
