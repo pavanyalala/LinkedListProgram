@@ -8,9 +8,11 @@ namespace LinkedList
         {
             Console.WriteLine("Welcome to linked list program");
             LinkedList linkedList = new LinkedList();
-            linkedList.Appendence(56);
-            linkedList.Appendence(30);
-            linkedList.Appendence(70);
+            linkedList.Add(56);
+            linkedList.Add(70);
+            linkedList.Display();
+            Console.WriteLine("Inserted 30 between 56 and 70");
+            linkedList.InsertAtParticularPosition(1, 30);
             linkedList.Display();
         }
     }
