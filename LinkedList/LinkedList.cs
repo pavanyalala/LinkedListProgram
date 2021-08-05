@@ -68,6 +68,12 @@ namespace LinkedList
                 temp.next = newNode;
             }
         }
+        /// <summary>
+        /// uc-4
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Node InsertAtParticularPosition(int position, int data)
         {
             Node newestNode = new Node(data);
@@ -92,6 +98,19 @@ namespace LinkedList
             }
             newestNode.next = prev.next;
             prev.next = newestNode;
+            return this.head;
+        }
+        /// <summary>
+        /// uc-5 delete first node
+        /// </summary>
+        /// <returns></returns>
+        public Node RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
             return this.head;
         }
         /// <summary>
