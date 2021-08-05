@@ -13,8 +13,8 @@ namespace LinkedList
             Console.WriteLine("Inserted 30 between 56 and 70");
             linkedList.InsertAtParticularPosition(1, 30);
             linkedList.Display();
-            Console.WriteLine("Delete first node ");
-            linkedList.RemoveFirstNode();
+            Console.WriteLine("Delete last node ");
+            linkedList.RemoveLastNode();
             linkedList.Display();
         }
     }
