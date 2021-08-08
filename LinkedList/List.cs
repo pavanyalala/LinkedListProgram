@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LinkedList
 {
-    class LinkedList
+    public class List
     {
         public Node head;
         /// <summary>
@@ -117,7 +115,7 @@ namespace LinkedList
         /// uc-6 Remove last node 
         /// </summary>
         /// <returns></returns>
-        internal Node RemoveLastNode()
+        public Node RemoveLastNode()
         {
             if (head == null)
             {
@@ -134,6 +132,26 @@ namespace LinkedList
             }
             NewNode.next = null;
             return head;
+        }
+        /// <summary>
+        /// uc-7 search for node 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
         /// <summary>
         /// Displays Linked List
