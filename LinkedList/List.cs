@@ -154,6 +154,48 @@ namespace LinkedList
             return count;
         }
         /// <summary>
+        /// uc-9 removes particluar element
+        /// </summary>
+        /// <param name="data"></param>
+        public void DeleteParticularElement(int data)
+        {
+            Node temp = head;
+            Node prev = null;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is Empty");
+            }
+            if (temp != null && temp.data == data)
+            {
+                head = temp.next;
+            }
+            while (temp != null && temp.data != data)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            prev.next = temp.next;
+        }
+        /// <summary>
+        /// size of list
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                return count;
+            }
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            return count;
+        }
+        /// <summary>
         /// Displays Linked List
         /// </summary>
         public void Display()

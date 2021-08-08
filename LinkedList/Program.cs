@@ -10,11 +10,13 @@ namespace LinkedList
             List list = new List();
             list.Add(56);
             list.Add(30);
+            list.Add(40);
             list.Add(70);
-            int nodePosition = list.Search(30);
-            list.InsertAtParticularPosition(nodePosition + 1, 40);
+            list.DeleteParticularElement(40);
             list.Display();
+            int finalSize = list.Size();
+            Console.WriteLine("Size of List : " + finalSize);
         }
-        
+    }    
 }
-}
+

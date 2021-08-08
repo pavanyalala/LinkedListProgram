@@ -28,4 +28,16 @@ namespace LinkedListTest
             int actualNode = list.Search(40);
             Assert.AreEqual(2, actualNode);
         }
+        [Test]
+        public void TestIfSize_Is_3()
+        {
+            LinkedList.List list = new LinkedList.List();
+            list.Add(56);
+            list.Add(30);
+            list.Add(70);
+            list.DeleteParticularElement(40);
+            int actualSize = list.Size();
+            Assert.AreEqual(3, actualSize);
+        }
+    }
 }
