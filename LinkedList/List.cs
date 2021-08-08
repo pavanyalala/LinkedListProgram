@@ -4,21 +4,21 @@ namespace LinkedList
 {
     public class List
     {
-        public Node head;
+        public Node<int> head;
         /// <summary>
         /// UC-1
         /// </summary>
         /// <param name="data"></param>
         public void Add(int data)
         {
-            Node node = new Node(data);
+            Node<int> node = new Node<int>(data);
             if (this.head == null)
             {
                 this.head = node;
             }
             else
             {
-                Node temp = head;
+                Node<int> temp = head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -33,14 +33,14 @@ namespace LinkedList
         /// <param name="data"></param>
         public void AddInReverseOrder(int data)
         {
-            Node newNode = new Node(data);
+            Node<int> newNode = new Node<int>(data);
             if (this.head == null)
             {
                 this.head = newNode;
             }
             else
             {
-                Node temp = this.head;
+                Node<int> temp = this.head;
                 head = newNode;
                 head.next = temp;
             }
@@ -51,14 +51,14 @@ namespace LinkedList
         /// <param name="data"></param>
         public void Appendence(int data)
         {
-            Node newNode = new Node(data);
+            Node<int> newNode = new Node<int>(data);
             if (this.head == null)
             {
                 this.head = newNode;
             }
             else
             {
-                Node temp = head;
+                Node<int> temp = head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -72,9 +72,9 @@ namespace LinkedList
         /// <param name="position"></param>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Node InsertAtParticularPosition(int position, int data)
+        public Node<int> InsertAtParticularPosition(int position, int data)
         {
-            Node newestNode = new Node(data);
+            Node<int> newestNode = new Node<int>(data);
             if (this.head == null)
             {
                 return newestNode;
@@ -85,8 +85,8 @@ namespace LinkedList
                 this.head = newestNode;
                 return this.head;
             }
-            Node prev = null;
-            Node current = this.head;
+            Node<int> prev = null;
+            Node<int> current = this.head;
             int count = 0;
             while (current != null && count < position)
             {
@@ -102,7 +102,7 @@ namespace LinkedList
         /// uc-5 delete first node
         /// </summary>
         /// <returns></returns>
-        public Node RemoveFirstNode()
+        public Node<int> RemoveFirstNode()
         {
             if (this.head == null)
             {
@@ -115,7 +115,7 @@ namespace LinkedList
         /// uc-6 Remove last node 
         /// </summary>
         /// <returns></returns>
-        public Node RemoveLastNode()
+        public Node<int> RemoveLastNode()
         {
             if (head == null)
             {
@@ -125,7 +125,7 @@ namespace LinkedList
             {
                 return null;
             }
-            Node NewNode = head;
+            Node<int> NewNode = head;
             while (NewNode.next.next != null)
             {
                 NewNode = NewNode.next;
@@ -140,7 +140,7 @@ namespace LinkedList
         /// <returns></returns>
         public int Search(int value)
         {
-            Node node = this.head;
+            Node<int> node = this.head;
             int count = 0;
             while (node != null)
             {
@@ -159,8 +159,8 @@ namespace LinkedList
         /// <param name="data"></param>
         public void DeleteParticularElement(int data)
         {
-            Node temp = head;
-            Node prev = null;
+            Node<int> temp = head;
+            Node<int> prev = null;
             if (temp == null)
             {
                 Console.WriteLine("LinkedList is Empty");
@@ -182,7 +182,7 @@ namespace LinkedList
         /// <returns></returns>
         public int Size()
         {
-            Node temp = this.head;
+            Node<int> temp = this.head;
             int count = 0;
             if (temp == null)
             {
@@ -200,7 +200,7 @@ namespace LinkedList
         /// </summary>
         public void Display()
         {
-            Node temp = this.head;
+            Node<int> temp = this.head;
             if (temp == null)
             {
                 Console.WriteLine("Linked List is Empty");

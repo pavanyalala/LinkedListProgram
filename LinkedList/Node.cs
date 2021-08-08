@@ -4,14 +4,15 @@ using System.Text;
 
 namespace LinkedList
 {
-    public class Node
-    {
-        public int data;
-        public Node next;
-        public Node(int data)
+        public class Node<T>
         {
-            this.data = data;
-
+            public T data;
+            public Node<T> next;
+            public Node(T data)
+            {
+                this.data = data;
+                next = null;
+            }
         }
     }
-}
+
